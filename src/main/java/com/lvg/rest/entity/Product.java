@@ -1,28 +1,33 @@
 package com.lvg.rest.entity;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Column;
+
+
 @Entity
-public class Product 
-{
-    @Id
-    @Column(name="prod_id")
-    private int productId;
-    @Column(name="prod_name")
-    private String productName;
-    @Column(name="prod_desc")
-    private String productDescription;
-    @Column(name="prod_price")
-    private double productPrice;
-    @Column(name="prod_qty")
-    private int productQuantity;
-    
-    public Product() {}
+public class Product {
+	@Id
+	@Column(name = "prod_id")
+	private int productId;
+	@Column(name = "prod_name")
+	private String productName;
+	@Column(name = "prod_desc")
+	private String productDescription;
+	@Column(name = "prod_price")
+	private double productPrice;
+	@Column(name = "prod_qty")
+	private int productQuantity;
+
+	public Product() {
+	}
 
 	public Product(int productId, String productName, String productDescription, double productPrice,
 			int productQuantity) {
-		this.productId = productId;		this.productName = productName;
-		this.productDescription = productDescription;		this.productPrice = productPrice;
+		this.productId = productId;
+		this.productName = productName;
+		this.productDescription = productDescription;
+		this.productPrice = productPrice;
 		this.productQuantity = productQuantity;
 	}
 
@@ -65,5 +70,5 @@ public class Product
 	public void setProductQuantity(int productQuantity) {
 		this.productQuantity = productQuantity;
 	}
-    
+
 }

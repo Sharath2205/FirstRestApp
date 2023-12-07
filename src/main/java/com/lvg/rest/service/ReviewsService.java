@@ -41,7 +41,7 @@ public class ReviewsService
         if(optRev.isPresent())
         {
         	Product p = restTemplate.getForEntity
-        	("http://localhost:8090/product/{productId}",Product.class,productId).getBody();
+        	("http://localhost:8099/product/{productId}",Product.class,productId).getBody();
         	Reviews r = optRev.get();
         	r.setProduct(new com.lvg.rest.dto.Product());
         	r.getProduct().setProductId(productId) ;   
@@ -53,5 +53,4 @@ public class ReviewsService
         }  	
         throw new ReviewNotFoundException("Review Does Not Exist with ProductId "+productId);
     }
-    
 }
